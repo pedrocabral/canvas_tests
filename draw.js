@@ -1,4 +1,6 @@
-window.onload = function(){
+window.addEventListener("load", draw, true);
+
+function draw() {
   const canvas = document.getElementById("screen");
   const ctx = canvas.getContext("2d");
   ctx.moveTo(20,20);
