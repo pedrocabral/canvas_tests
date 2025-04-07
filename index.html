@@ -1,22 +1,30 @@
 <!DOCTYPE html>
-<html>
-  <head></head>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>canvas tests</title>
+    <style>
+      canvas {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
   <body>
     <h3>Hello World!</h3>
-    <canvas id="screen" width="400" height="200" style="border:1px solid #000000;"></canvas>
-    <script>
+    <canvas id="screen" width="400" height="200></canvas>
+    <script type="application/javascript">
+      function drawCircle() {
       const canvas = document.getElementById("screen");
       const ctx = canvas.getContext("2d");
       let radius = canvas.height / 2;
       ctx.translate(radius, radius);
       radius = radius * 0.80
-      drawCircle();
       
-      function drawCircle() {
-        ctx.arc(0, 0, radius, 0 , 2 * Math.PI);
-        ctx.strokeStyle = "black";
-        ctx.stroke;
+      ctx.arc(0, 0, radius, 0 , 2 * Math.PI);
+      ctx.strokeStyle = "black";
+      ctx.stroke;
       }
+      drawCircle();
     </script>
   </body>
 </html>
